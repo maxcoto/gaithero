@@ -1,0 +1,156 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  height: 100%;
+}
+
+.note {
+  margin: auto;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.note-name {
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.note-name.required {
+  color: #ff0000;
+}
+
+.note-name.active {
+  color: #00b8da !important;
+}
+
+.note-names {
+  position: absolute
+  right: 50px;
+  width: 100px;
+  border-right: 1px solid gray;
+}
+
+.note-names::-webkit-scrollbar {
+  display: none;
+}
+
+.note-name span {
+  position: absolute;
+  right: 0.25em;
+  font-size: 40%;
+  font-weight: normal;
+}
+
+.note-sharp {
+  top: 0.30em;
+}
+
+.note-numbered {
+  bottom: 0.30em;
+}
+
+.note-frequency {
+  font-size: 32px;
+}
+
+.note-frequency span {
+  font-size: 50%;
+  margin-left: 0.25em;
+}
+
+.meter {
+  position: absolute;
+  right: 200px;
+  top: 50px;
+  height: 200px;
+}
+
+.stats {
+  top: 300px;
+  right: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.meter-frequency {
+  font-weight: bold;
+}
+
+.meter-note {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.stats div {
+  margin-bottom: 10px;
+}
+
+.meter-accuracy, .meter-tuning {
+  color: #00ce13;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.meter-pointer {
+  width: 2px;
+  height: 100%;
+  background: #2c3e50;
+  transform: rotate(45deg);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-dot {
+  width: 10px;
+  height: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  margin-right: -4px;
+}
+
+.meter-scale {
+  width: 1px;
+  height: 100%;
+  transform-origin: bottom;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+  border-top: 10px solid;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-scale-strong {
+  width: 2px;
+  border-top-width: 20px;
+}
+
+.frequency-bars {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .meter {
+    width: 100%;
+  }
+
+  .note {
+    width: 100%;
+  }
+}
